@@ -1,0 +1,22 @@
+package com.emarte.regurgitator.extensions.web;
+
+import com.emarte.regurgitator.core.Log;
+import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.Yaml;
+import com.emarte.regurgitator.core.YmlLoader;
+
+import java.util.Set;
+
+import static com.emarte.regurgitator.core.Log.getLog;
+import static com.emarte.regurgitator.core.YmlConfigUtil.loadMandatoryStr;
+import static com.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants.KEY;
+
+public class QueryParamProcessorYmlLoader implements YmlLoader<QueryParamProcessor> {
+	public static final Log log = getLog(QueryParamProcessorYmlLoader.class);
+
+	@Override
+	public QueryParamProcessor load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
+		log.debug("Loaded QueryParamProcessor");
+		return new QueryParamProcessor(loadMandatoryStr(yaml, KEY));
+	}
+}
