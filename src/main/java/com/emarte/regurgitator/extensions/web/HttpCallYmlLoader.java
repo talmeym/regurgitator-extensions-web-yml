@@ -25,7 +25,7 @@ public class HttpCallYmlLoader implements YmlLoader<Step> {
 
 		if(stepYamls != null) {
 			for (Object obj : stepYamls) {
-				Yaml stepYaml = getYaml((Map) obj);
+				Yaml stepYaml = new Yaml((Map) obj);
 				steps.add(loaderUtil.deriveLoader(stepYaml).load(stepYaml, allIds));
 			}
 		}
