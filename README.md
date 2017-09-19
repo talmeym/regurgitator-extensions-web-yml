@@ -92,7 +92,7 @@ this step is primarily a convenience step, agregating the following core config:
    source: response
 ```
 
-## extension web constructs in json
+## extension web constructs in yml
 
 ### query-param-processor
 
