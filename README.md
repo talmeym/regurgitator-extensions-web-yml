@@ -92,6 +92,21 @@ this step is primarily a convenience step, agregating the following core config:
    source: response
 ```
 
+### create-file-response
+
+a create-file-response step returns a response from regurgitator, with it's contents read from a file on the classpath, with the name of the file sourced from a parameter value. this is useful when you receive an http request for a file, and you wish to simply return the contents of that file, if it exists on the classpath.
+
+```yml
+create-file-response:
+ id: create-file-response-1
+ source: request-metadata:path-info
+ path-prefix: /assets
+```
+
+the optional ``path-prefix`` attribute specifies a path fragment to be prefixed to the value found in the parameter, making a request for ``/file.xml`` actually load and return ``classpath:/assets/file.xml``
+
+if the requested file does not exist on the classpath ``response-metadata:status-code`` is set to ``404`` and the step responds with ``Not Found``
+
 ## extension web constructs in yml
 
 ### query-param-processor
