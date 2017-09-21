@@ -98,7 +98,6 @@ a create-file-response step returns a response from regurgitator, with it's cont
 
 ```yml
 create-file-response:
- id: create-file-response-1
  source: request-metadata:path-info
  path-prefix: /assets
 ```
