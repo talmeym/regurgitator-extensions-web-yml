@@ -104,7 +104,7 @@ create-file-response:
 
 the optional ``path-prefix`` attribute specifies a path fragment to be prefixed to the value found in the parameter, making a request for ``/file.xml`` actually load and return ``classpath:/assets/file.xml``
 
-if the requested file does not exist on the classpath ``response-metadata:status-code`` is set to ``404`` and the step responds with ``Not Found``
+if the requested file does not exist on the classpath ``response-metadata:status-code`` is set to ``404`` and the step responds with ``Not Found``.
 
 ## extension web constructs in yml
 
