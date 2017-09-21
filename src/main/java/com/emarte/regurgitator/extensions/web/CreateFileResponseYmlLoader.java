@@ -9,7 +9,7 @@ import static com.emarte.regurgitator.core.YmlConfigUtil.*;
 import static com.emarte.regurgitator.extensions.web.WebConfigConstants.PATH_PREFIX;
 
 public class CreateFileResponseYmlLoader implements YmlLoader<CreateFileResponse> {
-	private static Log log = Log.getLog(CreateFileResponseYmlLoader.class);
+	private static final Log log = Log.getLog(CreateFileResponseYmlLoader.class);
 
 	@Override
 	public CreateFileResponse load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
