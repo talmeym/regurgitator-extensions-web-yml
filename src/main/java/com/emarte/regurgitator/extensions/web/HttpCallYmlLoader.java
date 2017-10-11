@@ -6,10 +6,7 @@ package com.emarte.regurgitator.extensions.web;
 
 import com.emarte.regurgitator.core.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static com.emarte.regurgitator.core.CoreConfigConstants.STEPS;
 import static com.emarte.regurgitator.core.Log.getLog;
