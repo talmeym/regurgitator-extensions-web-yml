@@ -11,7 +11,7 @@ import java.util.*;
 import static com.emarte.regurgitator.core.CoreConfigConstants.STEPS;
 import static com.emarte.regurgitator.core.Log.getLog;
 import static com.emarte.regurgitator.core.YmlConfigUtil.*;
-import static com.emarte.regurgitator.extensions.web.WebConfigConstants.*;
+import static com.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants.*;
 import static java.lang.Integer.parseInt;
 
 public class HttpCallYmlLoader implements YmlLoader<Step> {
