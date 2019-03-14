@@ -31,6 +31,7 @@ public class HttpCallYmlLoader implements YmlLoader<Step> {
             }
         }
 
+        String protocol = loadOptionalStr(yaml, PROTOCOL);
         String username = loadOptionalStr(yaml, USERNAME);
         String password = loadOptionalStr(yaml, PASSWORD);
 
@@ -39,6 +40,6 @@ public class HttpCallYmlLoader implements YmlLoader<Step> {
         }
 
         log.debug("Loaded HttpCall '{}'", id);
-        return new HttpCall(id, new HttpMessageProxy(new HttpClientWrapper(loadMandatoryStr(yaml, HOST), parseInt(loadMandatoryStr(yaml, PORT)), username, password)), steps);
+        return new HttpCall(id, new HttpMessageProxy(new HttpClientWrapper(protocol != null ? protocol : "http", loadMandatoryStr(yaml, HOST), parseInt(loadMandatoryStr(yaml, PORT)), username, password)), steps);
     }
 }
