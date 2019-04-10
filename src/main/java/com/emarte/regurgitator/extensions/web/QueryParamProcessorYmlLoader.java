@@ -4,7 +4,10 @@
  */
 package com.emarte.regurgitator.extensions.web;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.Log;
+import com.emarte.regurgitator.core.RegurgitatorException;
+import com.emarte.regurgitator.core.Yaml;
+import com.emarte.regurgitator.core.YmlLoader;
 
 import java.util.Set;
 
