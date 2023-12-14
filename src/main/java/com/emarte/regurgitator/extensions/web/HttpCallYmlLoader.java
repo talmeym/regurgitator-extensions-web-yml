@@ -19,12 +19,12 @@ import static java.lang.Integer.parseInt;
 
 public class HttpCallYmlLoader implements YmlLoader<Step> {
     private static final Log log = getLog(HttpCallYmlLoader.class);
-    private static final YmlLoaderUtil<YmlLoader<Step>> loaderUtil = new YmlLoaderUtil<YmlLoader<Step>>();
+    private static final YmlLoaderUtil<YmlLoader<Step>> loaderUtil = new YmlLoaderUtil<>();
 
     @Override
     public Step load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         String id = loadId(yaml, allIds);
-        List<Step> steps = new ArrayList<Step>();
+        List<Step> steps = new ArrayList<>();
         List stepYamls = (List) yaml.get(STEPS);
 
         if(stepYamls != null) {
