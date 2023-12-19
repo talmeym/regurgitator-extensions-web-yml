@@ -25,11 +25,11 @@ public class HttpCallYmlLoader implements YmlLoader<Step> {
     public Step load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         String id = loadId(yaml, allIds);
         List<Step> steps = new ArrayList<>();
-        List stepYamls = (List) yaml.get(STEPS);
+        List<?> stepYamls = (List<?>) yaml.get(STEPS);
 
         if(stepYamls != null) {
             for (Object obj : stepYamls) {
-                Yaml stepYaml = new Yaml((Map) obj);
+                Yaml stepYaml = new Yaml((Map<?, ?>) obj);
                 steps.add(loaderUtil.deriveLoader(stepYaml).load(stepYaml, allIds));
             }
         }
