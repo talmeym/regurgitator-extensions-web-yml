@@ -2,15 +2,15 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.extensions.web;
+package uk.emarte.regurgitator.extensions.web;
 
-import com.emarte.regurgitator.core.*;
+import uk.emarte.regurgitator.core.*;
 
 import java.util.Set;
 
-import static com.emarte.regurgitator.core.CoreConfigConstants.SOURCE;
-import static com.emarte.regurgitator.core.YmlConfigUtil.*;
-import static com.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants.PATH_PREFIX;
+import static uk.emarte.regurgitator.core.CoreConfigConstants.SOURCE;
+import static uk.emarte.regurgitator.core.YmlConfigUtil.*;
+import static uk.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants.PATH_PREFIX;
 
 public class CreateFileResponseYmlLoader implements YmlLoader<CreateFileResponse> {
     private static final Log log = Log.getLog(CreateFileResponseYmlLoader.class);
