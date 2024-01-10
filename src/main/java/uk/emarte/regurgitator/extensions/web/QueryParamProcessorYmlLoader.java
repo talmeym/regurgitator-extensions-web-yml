@@ -2,18 +2,18 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.extensions.web;
+package uk.emarte.regurgitator.extensions.web;
 
-import com.emarte.regurgitator.core.Log;
-import com.emarte.regurgitator.core.RegurgitatorException;
-import com.emarte.regurgitator.core.Yaml;
-import com.emarte.regurgitator.core.YmlLoader;
+import uk.emarte.regurgitator.core.Log;
+import uk.emarte.regurgitator.core.RegurgitatorException;
+import uk.emarte.regurgitator.core.Yaml;
+import uk.emarte.regurgitator.core.YmlLoader;
 
 import java.util.Set;
 
-import static com.emarte.regurgitator.core.Log.getLog;
-import static com.emarte.regurgitator.core.YmlConfigUtil.loadMandatoryStr;
-import static com.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants.KEY;
+import static uk.emarte.regurgitator.core.Log.getLog;
+import static uk.emarte.regurgitator.core.YmlConfigUtil.loadMandatoryStr;
+import static uk.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants.KEY;
 
 public class QueryParamProcessorYmlLoader implements YmlLoader<QueryParamProcessor> {
     private static final Log log = getLog(QueryParamProcessorYmlLoader.class);
