@@ -19,17 +19,17 @@ import static uk.emarte.regurgitator.extensions.web.ExtensionsWebConfigConstants
 
 public class HttpCallYmlLoader implements YmlLoader<Step> {
     private static final Log log = getLog(HttpCallYmlLoader.class);
-    private static final YmlLoaderUtil<YmlLoader<Step>> loaderUtil = new YmlLoaderUtil<YmlLoader<Step>>();
+    private static final YmlLoaderUtil<YmlLoader<Step>> loaderUtil = new YmlLoaderUtil<>();
 
     @Override
     public Step load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         String id = loadId(yaml, allIds);
-        List<Step> steps = new ArrayList<Step>();
-        List stepYamls = (List) yaml.get(STEPS);
+        List<Step> steps = new ArrayList<>();
+        List<?> stepYamls = (List<?>) yaml.get(STEPS);
 
         if(stepYamls != null) {
             for (Object obj : stepYamls) {
-                Yaml stepYaml = new Yaml((Map) obj);
+                Yaml stepYaml = new Yaml((Map<?, ?>) obj);
                 steps.add(loaderUtil.deriveLoader(stepYaml).load(stepYaml, allIds));
             }
         }
