@@ -4,6 +4,10 @@ regurgitator is a lightweight, modular, extendable java framework that you confi
 
 start your reading here: [regurgitator-all](https://talmeym.github.io/regurgitator-all#regurgitator)
 
+read more about regurgitator in yml here: [regurgitator-core-yml](https://talmeym.github.io/regurgitator-core-yml#yml-configuration-of-regurgitator)
+
+[``apidocs``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-web-yml/0.1.2/)
+
 ## extension web steps in yml
 
 ### http-call 
