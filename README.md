@@ -6,8 +6,6 @@ start your reading here: [regurgitator-all](https://talmeym.github.io/regurgitat
 
 read more about regurgitator in yml here: [regurgitator-core-yml](https://talmeym.github.io/regurgitator-core-yml#yml-configuration-of-regurgitator)
 
-[``apidocs``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-web-yml/0.1.2/)
-
 ## extension web steps in yml
 
 ### http-call 
@@ -125,3 +123,7 @@ create-parameter:
 ```
 
 if the key appears in the query string more than once, the processor will aggregate the values into a collection.
+
+---
+
+api docs: [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-web-yml/0.1.3/){:target="_blank"} [``0.1.2``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-web-yml/0.1.2/){:target="_blank"}
